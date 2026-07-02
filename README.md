@@ -9,6 +9,8 @@ A simple Bank Account Management System built using Python to practice Object-Or
 - Debit money
 - Transfer money between accounts
 - Display account balance
+- Mini statement
+- Account number Generation 
 
 ## 🛠️ Concepts Used
 
@@ -41,7 +43,6 @@ bank-account-management-system/
 ## 🔮 Future Improvements
 
 - Transaction History
-- Account Number Generation
 - PIN Authentication
 - File Storage
 - Menu-Driven Interface

@@ -1,8 +1,13 @@
 class Account:
+    next_account_number = 1000
 
     def __init__(self, name, balance):
         self.name    = name
         self.balance = balance
+
+        self.account_number = Account.next_account_number
+        Account.next_account_number += 1
+
 
     def account_debit(self, amount):
         if amount <= self.balance:
@@ -29,7 +34,7 @@ class Account:
     # Mini statement 
     
     def mini(self):
-        print(f"=====Mini Statement=====\n Account holder : {self.name }\n Current balanc:{self.balance}\n ======================")
+        print(f"=====Mini Statement=====\n Account holder : {self.name }\nAccount Number : {self.account_number}\nCurrent balanc:{self.balance}\n ======================")
     
 #savings account:
 class SavingAccounts(Account):
@@ -58,10 +63,14 @@ a1.show_balance()
 a2.show_balance()
 print("\n")
 
-a1.mini()
-
-
+#creating third account
 a3= SavingAccounts("Akash",10000)
 
 a3.interest(5)
 a3.show_balance()
+print("\n")
+
+#mini statement
+a1.mini()
+a2.mini()
+a3.mini()
