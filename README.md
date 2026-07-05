@@ -1,54 +1,82 @@
 # 🏦 Bank Account Management System
 
-A simple Bank Account Management System built using Python to practice Object-Oriented Programming (OOP).
+A Python-based Bank Account Management System built to practice Object-Oriented Programming (OOP), data structures, and software development principles.
 
-## 📌 Features
+## 📌 Current Features
 
-- Create a bank account
-- Credit money
-- Debit money
-- Transfer money between accounts
-- Display account balance
-- Mini statement
-- Account number Generation 
+- ✅ Menu-driven interface
+- ✅ Create new bank accounts
+- ✅ Automatic account number generation
+- ✅ Store multiple accounts using a dictionary
+- 🚧 Deposit Money (In Progress)
+- 🚧 Withdraw Money (Coming Soon)
+- 🚧 Transfer Money (Coming Soon)
+- 🚧 Show Balance (Coming Soon)
+- 🚧 Mini Statement(Coming Soon)
+- 🚧 File Handling (Planned)
 
 ## 🛠️ Concepts Used
 
 - Python Classes & Objects
 - Constructors (`__init__`)
+- Inheritance
 - Instance Variables
-- Methods
+- Class Variables
+- Dictionaries
+- Loops (`while`)
+- Conditional Statements (`if`, `elif`, `else`)
+- User Input
 - Object Interaction
-- Conditional Statements
 
 ## 🚀 How to Run
 
 1. Clone this repository.
-2. Open `main.py` in VS Code.
+
+```bash
+git clone https://github.com/ayushgupta-dev18/bank_account-_mnagement_system.git
+```
+
+2. Open the project in VS Code.
+
 3. Run:
 
 ```bash
 python main.py
 ```
 
-## 📂 Project Structure
+## 📂 Proect Structure
 
 ```
-bank-account-management-system/
+bank_account_management_system/
 │
 ├── main.py
 └── README.md
 ```
 
-## 🔮 Future Improvements
+## 🎯 Learning Goals
 
+This project is being developed step by step to strengthen understanding of:
+
+- Object-Oriented Programming
+- Data Structures
+- Python Programming
+- Git & GitHub
+- Software Development Workflow
+
+## 🔮 Upcoming Features
+
+- Deposit Money
+- Withdraw Money
+- Transfer Money
+- Show Balance
+- Mini Statement
 - Transaction History
 - PIN Authentication
-- File Storage
-- Menu-Driven Interface
+- File Handling
+- Better User Interface
 
 ## 👨‍💻 Author
 
-**Ayush Gupta**
+*Ayush Gupta**
 
-GitHub: [https://github.com/ayushgupta-dev18]
+GitHub: https://github.com/ayushgupta-dev18

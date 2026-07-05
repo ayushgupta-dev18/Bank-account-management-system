@@ -8,69 +8,35 @@ class Account:
         self.account_number = Account.next_account_number
         Account.next_account_number += 1
 
+accounts = {}
 
-    def account_debit(self, amount):
-        if amount <= self.balance:
-            print(f"₹{amount} debited from {self.name} account")
-            self.balance -= amount
-        else:
-            print("Insufficient balance")
+while True:
+    print("\n===== BANK MANAGEMENT SYSTEM =====")
+    print("1. Create Account")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Transfer Money")
+    print("5. Show Balance")
+    print("6. Mini Statement")
+    print("7. Exit")
 
-    def account_credit(self, amount):
-        print(f"₹{amount} credited to {self.name} account")
-        self.balance += amount
+    choice = int(input("Enter your choice: "))
 
-    def show_balance(self):
-       print(f"{self.name} has ₹{self.balance} remaining in account")
+    if choice == 1:
+        name = input("Enter your name: ")
+        balance = int(input("Enter initial balance: "))
 
-    def transfer(self, other_account, amount):
-        if amount <= self.balance:
-            self.balance -= amount
-            other_account.balance += amount
-            print(f"₹{amount} transferred from {self.name} to {other_account.name}")
-        else:
-            print("Insufficient balance.")
-    
-    # Mini statement 
-    
-    def mini(self):
-        print(f"=====Mini Statement=====\n Account holder : {self.name }\nAccount Number : {self.account_number}\nCurrent balanc:{self.balance}\n ======================")
-    
-#savings account:
-class SavingAccounts(Account):
-    
-    
-    def interest(self, add_interest):
-        interest= self.balance*add_interest/100
-        self.account_credit(interest)
-    
-    
-    
-# Creating two account:
-a1 = Account("Ayush", 10000)
-a2 = Account("Ashish", 5000)
+        new_account = Account(name, balance)
+        accounts[new_account.account_number] = new_account
 
-a1.account_credit(4000)
-a1.account_debit(1000)
+        print("\n✅ Account Created Successfully!")
+        print(f"Account Holder : {new_account.name}")
+        print(f"Account Number : {new_account.account_number}")
+        print(f"Current Balance: ₹{new_account.balance}")
 
-a1.show_balance()
-a2.show_balance()
+    elif choice == 7:
+        print("Thank you for using Bank Management System!")
+        break
 
-a1.transfer(a2, 3000)
-
-print("\nAfter Transfer:")
-a1.show_balance()
-a2.show_balance()
-print("\n")
-
-#creating third account
-a3= SavingAccounts("Akash",10000)
-
-a3.interest(5)
-a3.show_balance()
-print("\n")
-
-#mini statement
-a1.mini()
-a2.mini()
-a3.mini()
+    else:
+        print("This feature is not implemented yet.")
