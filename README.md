@@ -8,12 +8,12 @@ A Python-based Bank Account Management System built to practice Object-Oriented 
 - ✅ Create new bank accounts
 - ✅ Automatic account number generation
 - ✅ Store multiple accounts using a dictionary
-- 🚧 Deposit Money (In Progress)
-- 🚧 Withdraw Money (Coming Soon)
-- 🚧 Transfer Money (Coming Soon)
-- 🚧 Show Balance (Coming Soon)
-- 🚧 Mini Statement(Coming Soon)
-- 🚧 File Handling (Planned)
+- ✅ Deposit Money 
+- ✅ Withdraw Money 
+- ✅ Transfer Money 
+- ✅ Show Balance 
+- ✅ Mini Statement
+- 🚧 File Handling (Coming soon)
 
 ## 🛠️ Concepts Used
 
@@ -65,11 +65,6 @@ This project is being developed step by step to strengthen understanding of:
 
 ## 🔮 Upcoming Features
 
-- Deposit Money
-- Withdraw Money
-- Transfer Money
-- Show Balance
-- Mini Statement
 - Transaction History
 - PIN Authentication
 - File Handling
