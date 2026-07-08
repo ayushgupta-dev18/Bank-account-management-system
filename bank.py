@@ -39,6 +39,51 @@ class Account:
 
 accounts = {}
 
+
+# Load accounts from file
+
+try:
+    file = open("accounts.txt", "r")
+
+    lines = file.readlines()
+
+    for line in lines:
+
+        line = line.strip()
+
+        if line == "":
+            continue
+
+        data = line.split(",")
+
+        account_number = int(data[0])
+        name = data[1]
+        balance = int(data[2])
+
+        account = Account(name, balance)
+
+        account.account_number = account_number
+
+        accounts[account_number] = account
+
+        Account.next_account_number = account_number + 1
+
+    file.close()
+
+except FileNotFoundError:
+    print("No previous accounts found. Starting fresh...")
+
+
+def save_accounts():
+
+    file = open("accounts.txt", "w")
+
+    for account in accounts.values():
+        file.write(f"{account.account_number},{account.name},{account.balance}\n")
+
+    file.close()
+
+
 while True:
     print("\n===== BANK MANAGEMENT SYSTEM =====")
     print("1. Create Account")
@@ -60,13 +105,21 @@ while True:
         print(f"Account Holder : {new_account.name}")
         print(f"Account Number : {new_account.account_number}")
         print(f"Current Balance: ₹{new_account.balance}")
-    
+        
+       #file Handling
+        file = open("accounts.txt", "a")
+        file.write(f"{new_account.account_number},{new_account.name},{new_account.balance}\n")
+
+        file.close()
+
+
     #deposit menu
     elif choice == 2:
         account_number = int(input("Enter account number : "))
         if account_number in accounts:
             deposit_amount = int(input("Enter Deposit Amount : "))
-            accounts[account_number].account_credit(deposit_amount)     
+            accounts[account_number].account_credit(deposit_amount)   
+            save_accounts()  
         else:
             print("Account does not exits!")
 
@@ -76,6 +129,7 @@ while True:
         if account_number in accounts:
             withdrawal_amount = int(input("Enter Withdrawal Amount : "))
             accounts[account_number].account_debit(withdrawal_amount)
+            save_accounts()
         else:
             print("Account does not exist!")
     
@@ -89,6 +143,7 @@ while True:
             if  accounts[sender_account].account_debit(amount):
                  
                  accounts[reciever_account].account_credit(amount)
+                 save_accounts()
                  print(f"₹{amount} transferred successfully "
                        f"from {accounts[sender_account].name} "
                        f"to {accounts[reciever_account].name}.")

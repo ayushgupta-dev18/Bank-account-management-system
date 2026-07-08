@@ -1,77 +1,65 @@
-# 🏦 Bank Account Management System
+# 🏦 Bank Management System (Python)
 
-A Python-based Bank Account Management System built to practice Object-Oriented Programming (OOP), data structures, and software development principles.
+A simple Bank Management System built using Python to practice Object-Oriented Programming (OOP), dictionaries, loops, functions, and file handling.
 
-## 📌 Current Features
+## ✨ Features
 
-- ✅ Menu-driven interface
-- ✅ Create new bank accounts
-- ✅ Automatic account number generation
-- ✅ Store multiple accounts using a dictionary
-- ✅ Deposit Money 
-- ✅ Withdraw Money 
-- ✅ Transfer Money 
-- ✅ Show Balance 
+- ✅ Create Account
+- ✅ Deposit Money
+- ✅ Withdraw Money
+- ✅ Transfer Money
+- ✅ Show Balance
 - ✅ Mini Statement
-- 🚧 File Handling (Coming soon)
+- ✅ Automatic Account Number Generation
+- ✅ Data Persistence using File Handling
+- ✅ Automatically Loads Saved Accounts on Program Start
 
-## 🛠️ Concepts Used
+## 📚 Concepts Used
 
 - Python Classes & Objects
-- Constructors (`__init__`)
-- Inheritance
-- Instance Variables
-- Class Variables
+- Constructors (__init__)
+- Methods
 - Dictionaries
-- Loops (`while`)
-- Conditional Statements (`if`, `elif`, `else`)
-- User Input
-- Object Interaction
+- Loops
+- Conditional Statements
+- Functions
+- File Handling (Read & Write)
+- Exception Handling (try-except)
+
+## 📁 Project Structure
+
+```
+Bank-Management-System/
+│── bank.py
+│── accounts.txt
+│── README.md
+```
 
 ## 🚀 How to Run
 
-1. Clone this repository.
+1. Clone this repository
 
 ```bash
-git clone https://github.com/ayushgupta-dev18/bank_account-_mnagement_system.git
+git clone https://github.com/your-username/Bank-Management-System.git
 ```
 
-2. Open the project in VS Code.
+2. Open the project folder
 
-3. Run:
+3. Run
 
 ```bash
-python main.py
+python bank.py
 ```
 
-## 📂 Proect Structure
-
-```
-bank_account_management_system/
-│
-├── main.py
-└── README.md
-```
-
-## 🎯 Learning Goals
-
-This project is being developed step by step to strengthen understanding of:
-
-- Object-Oriented Programming
-- Data Structures
-- Python Programming
-- Git & GitHub
-- Software Development Workflow
-
-## 🔮 Upcoming Features
+## 🎯 Future Improvements
 
 - Transaction History
 - PIN Authentication
-- File Handling
-- Better User Interface
+- Delete Account
+- Interest Calculation
 
 ## 👨‍💻 Author
 
-*Ayush Gupta**
+**Ayush Gupta**
 
-GitHub: https://github.com/ayushgupta-dev18
+Learning Python step by step and building projects to strengthen programming skills.
